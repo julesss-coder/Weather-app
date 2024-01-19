@@ -10,13 +10,6 @@ Separate UI code from API call code
 // Accuweather API key
 const key = 'xRGf1AI3AgaB1MvKh3QACiNGKpWMwIvR';
 
-const locationForm = document.querySelector(".change-location");
-const weatherDetailsElement = document.querySelector(".details");
-const card = document.querySelector(".card");
-const timeOfDay = document.querySelector(".time");
-const weatherIcon = document.querySelector(".icon img");
-const errorElement = document.querySelector(".error");
-
 const displayErrorMessage = () => {
   if (card.classList.contains("d-none") === false) {
     card.classList.add("d-none");
@@ -86,20 +79,6 @@ const updateLocationWeather = async (location) => {
   };
 };
 
-locationForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const location = locationForm.city.value.trim();
-    locationForm.reset();
-
-    updateLocationWeather(location)
-      .then(data => {
-        updateUI(data);
-      })
-      .catch(error => {
-        displayErrorMessage();
-      });
-});
 
 
 
