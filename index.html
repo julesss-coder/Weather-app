@@ -10,27 +10,23 @@
 <body>
   
   <div class="container my-5 mx-auto">
-    <h1 class="text-muted text-center my-4">Weather App</h1>
+    <h1 class="text-muted text-center my-4">Current Weather App</h1>
 
     <form class="change-location my-4 text-center text-muted">
-      <label for="city">Get the weather in...</label>
-      <input type="text" name="city" class="requested-location form-control p-4" placeholder="location (use English name)">
+      <label for="city" class="mb-2">Get the current weather in...</label>
+      <input type="text" name="city" class="requested-location form-control p-4">
     </form>
 
-    <div class="card shadow-lg rounded">
+    <div class="card shadow-lg rounded bg-light d-none">
       <img src="https://picsum.photos/200/300" class="time card-img-top">
       <div class="icon bg-light mx-auto text-center">
-        <!-- icon -->
+        <img src="#" alt="">
       </div>
       <div class="text-muted text-uppercase text-center details">
-        <h5 class="city-name my-3">City name</h5>
-        <div class="weather-condition my-3">Weather condition</div>
-        <div class="display-4 my-4">
-          <span class="temperature">temp</span>
-          <span>&deg;C</span>
-        </div>
+        <!-- details -->
       </div>
     </div>
+    <div class="error d-none"></div>
   </div>
 
   <script src="./scripts/forecast.js"></script>
