@@ -8,7 +8,7 @@ Separate UI code from API call code
 */
 
 // Accuweather API key
-const key = 'xRGf1AI3AgaB1MvKh3QACiNGKpWMwIvR';
+const key = 'wQuUJOSg82teqjqdAojAuBPDactFBbVA';
 
 
 
