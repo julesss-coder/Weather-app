@@ -38,13 +38,11 @@ const updateUI = (locationWeatherData) => {
   }
 
   // Update timeOfDay icon
-  let timeOfDaySrc = null;
-  timeOfDaySrc = locationWeather.isDayTime ? '../img/day.svg' : '../img/night.svg';
+  let timeOfDaySrc = locationWeather.isDayTime ? '../img/day.svg' : '../img/night.svg';
   timeOfDay.src = timeOfDaySrc;
 
   // Update weather icon
-  let weatherIconSrc = null;
-  weatherIconSrc = `../img/icons/${locationWeather.WeatherIcon}.svg`;
+  let weatherIconSrc = `../img/icons/${locationWeather.WeatherIcon}.svg`;
   weatherIcon.src = weatherIconSrc;
 
 };
