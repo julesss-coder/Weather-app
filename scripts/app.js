@@ -52,12 +52,27 @@ locationForm.addEventListener('submit', e => {
 
   const location = locationForm.city.value.trim();
   locationForm.reset();
-
+  
   updateLocationWeather(location)
-    .then(data => {
-      updateUI(data);
-    })
-    .catch(error => {
-      displayErrorMessage();
-    });
+  .then(data => {
+    updateUI(data);
+  })
+  .catch(error => {
+    displayErrorMessage();
+  });
+  
+  // Save location
+  localStorage.setItem("location", location);
 });
+
+
+// Every time page is opened/refreshed, get weather for previously saved location
+if (localStorage.getItem("location")) {
+  updateLocationWeather(localStorage.getItem("location"))
+  .then(data => {
+    updateUI(data);
+  })
+  .catch(error => {
+    displayErrorMessage();
+  });
+}
